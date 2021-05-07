@@ -20,10 +20,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        height: _size.height,
+        width: _size.width,
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('asset/images/bg.png')
