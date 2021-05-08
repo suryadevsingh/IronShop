@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'OrderConfirmPage.dart';
-import 'StyleScheme.dart';
+import '../Order/OrderConfirmPage.dart';
+import '../StyleScheme.dart';
 
 class PickUpTimePage extends StatefulWidget {
   const PickUpTimePage({Key key}) : super(key: key);

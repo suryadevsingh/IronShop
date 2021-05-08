@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'PickUpTimePage.dart';
-import 'StyleScheme.dart';
+import '../PickUpTimePage/PickUpTimePage.dart';
+import '../StyleScheme.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({Key key}) : super(key: key);

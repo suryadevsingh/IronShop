@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'StyleScheme.dart';
-import 'TrackOrderPage.dart';
+import '../StyleScheme.dart';
+import '../TrackOrder/TrackOrderPage.dart';
 
 class OrderConfirmPage extends StatefulWidget {
   const OrderConfirmPage({Key key}) : super(key: key);

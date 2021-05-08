@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'StyleScheme.dart';
+import '../StyleScheme.dart';
 
 class TrackOrderPage extends StatefulWidget {
   const TrackOrderPage({Key key}) : super(key: key);

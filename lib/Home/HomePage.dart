@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'OrderPage.dart';
-import 'StyleScheme.dart';
+import '../Order/OrderPage.dart';
+import '../StyleScheme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
