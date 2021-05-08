@@ -18,6 +18,7 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
+          onPressed: (){},
           icon: Icon(Icons.arrow_back_ios),
         ),
         title: Text(
@@ -26,6 +27,7 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
         ),
         actions: [
           IconButton(
+            onPressed: (){},
             icon: Icon(Icons.search),
           )
         ],

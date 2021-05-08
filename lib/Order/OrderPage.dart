@@ -18,6 +18,7 @@ class _OrderPageState extends State<OrderPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
+          onPressed: (){},
           icon: Icon(Icons.arrow_back_ios),
         ),
         title: Text(
@@ -26,6 +27,7 @@ class _OrderPageState extends State<OrderPage> {
         ),
         actions: [
           IconButton(
+            onPressed: (){},
             icon: Icon(Icons.search),
           )
         ],

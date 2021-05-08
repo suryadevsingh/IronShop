@@ -17,6 +17,7 @@ class _TrackOrderPageState extends State<TrackOrderPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
+          onPressed: (){},
           icon: Icon(Icons.arrow_back_ios),
         ),
         title: Text(
@@ -25,6 +26,7 @@ class _TrackOrderPageState extends State<TrackOrderPage> {
         ),
         actions: [
           IconButton(
+            onPressed: (){},
             icon: Icon(Icons.search),
           )
         ],
@@ -109,15 +111,15 @@ class _TrackOrderPageState extends State<TrackOrderPage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text("Home"),
+            label: "Home",
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.track_changes), title: Text("Track Order")),
+              icon: Icon(Icons.track_changes), label: "Track Order"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.view_list), title: Text("My Orders")),
+              icon: Icon(Icons.view_list), label: "My Orders"),
           BottomNavigationBarItem(
             icon: Icon(Icons.track_changes),
-            title: Text("Profile"),
+            label: "Profile",
           ),
         ],
       ),
