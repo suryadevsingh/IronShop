@@ -3,6 +3,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'OnBoarding.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key key}) : super(key: key);
 
@@ -46,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   void openOnBoard()
   {
-    // Navigator.push(context, MaterialPageRoute(builder: (context)=>Onboarding()),);
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>OnBoarding()),);
   }
 
 }

@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'SignUpPage.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key key}) : super(key: key);
 
@@ -183,7 +185,7 @@ class _LoginPageState extends State<LoginPage> {
 
   void openSignUpPage()
   {
-    // Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
   }
   void openHomePage()
   {
