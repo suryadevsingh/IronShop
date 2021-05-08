@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'LoginPage.dart';
@@ -12,7 +10,7 @@ class OnBoarding extends StatefulWidget {
 }
 
 class _OnBoardingState extends State<OnBoarding> {
-  int currentPage =0;
+  int currentPage = 0;
   PageController _pageController = new PageController(
     initialPage: 0,
     keepPage: true,
@@ -30,36 +28,33 @@ class _OnBoardingState extends State<OnBoarding> {
               height: _size.height,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                    "asset/images/bg.png"
-                  ),
+                  image: AssetImage("asset/images/bg.png"),
                 ),
               ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               Container(
-                 height: 500,
-                 child: PageView(
-                   controller: _pageController,
-                   children: [
-                     onBoardPage("onBoard1","Choose Clothes"),
-                     onBoardPage("onBoard2", "Schedule Pickup"),
-                     onBoardPage("onBoard3", "Get Best Iron Service"),
-                     onBoardPage("onBoard2", "Get on Time Delivery"),
-                     onBoardPage("onBoard4", "Pay Later"),
-                   ],
-                   onPageChanged: (value) => {setCurrentPage(value)},
-                 ),
-               ),
+                Container(
+                  height: 500,
+                  child: PageView(
+                    controller: _pageController,
+                    children: [
+                      onBoardPage("onBoard1", "Choose Clothes"),
+                      onBoardPage("onBoard2", "Schedule Pickup"),
+                      onBoardPage("onBoard3", "Get Best Iron Service"),
+                      onBoardPage("onBoard2", "Get on Time Delivery"),
+                      onBoardPage("onBoard4", "Pay Later"),
+                    ],
+                    onPageChanged: (value) => {setCurrentPage(value)},
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(5, (index) => getIndicator(index)),
                 ),
               ],
             ),
-
             Positioned(
               bottom: 0,
               left: 0,
@@ -74,9 +69,8 @@ class _OnBoardingState extends State<OnBoarding> {
                     shape: BoxShape.circle,
                     gradient: LinearGradient(
                         colors: [Color(0xfff3953b), Color(0xffe57509)],
-                        stops: [0,1],
-                        begin: Alignment.topCenter
-                    ),
+                        stops: [0, 1],
+                        begin: Alignment.topCenter),
                   ),
                   child: Icon(
                     Icons.arrow_forward,
@@ -86,37 +80,30 @@ class _OnBoardingState extends State<OnBoarding> {
                 ),
               ),
             ),
-
-
           ],
         ),
       ),
     );
   }
 
-  setCurrentPage(int value){
+  setCurrentPage(int value) {
     currentPage = value;
-    setState(() {
-
-    });
+    setState(() {});
   }
 
-  AnimatedContainer getIndicator(int pageNo){
+  AnimatedContainer getIndicator(int pageNo) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 100),
       height: 10,
       width: (currentPage == pageNo) ? 20 : 10,
       margin: EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(5)),
-        color: (currentPage == pageNo) ? Colors.orange : Colors.grey
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+          color: (currentPage == pageNo) ? Colors.orange : Colors.grey),
     );
   }
 
-
-  Column onBoardPage(String img, String title)
-  {
+  Column onBoardPage(String img, String title) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -125,39 +112,39 @@ class _OnBoardingState extends State<OnBoarding> {
           width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.all(50),
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('asset/images/$img.png')
-              )
-          ),
+              image:
+                  DecorationImage(image: AssetImage('asset/images/$img.png'))),
         ),
         Container(
           padding: EdgeInsets.symmetric(vertical: 10),
-          child: Text(title, style: TextStyle(
-              fontSize: 30,
-              fontFamily: 'roboto',
-              fontWeight: FontWeight.w500
-          ),),
+          child: Text(
+            title,
+            style: TextStyle(
+                fontSize: 30,
+                fontFamily: 'roboto',
+                fontWeight: FontWeight.w500),
+          ),
         ),
         Container(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-          child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text", style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey
-          ),textAlign: TextAlign.center,),
+          child: Text(
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
+            style: TextStyle(fontSize: 16, color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
         )
       ],
     );
   }
 
-  void changePage(){
+  void changePage() {
     print(currentPage);
-    if(currentPage == 4){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
-    }
-    else
-      {
-      _pageController.animateToPage(currentPage+1, duration: Duration(milliseconds: 200), curve: Curves.linear);
+    if (currentPage == 4) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => LoginPage()));
+    } else {
+      _pageController.animateToPage(currentPage + 1,
+          duration: Duration(milliseconds: 200), curve: Curves.linear);
     }
   }
-
 }

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'PickUpTimePage.dart';
@@ -21,9 +20,10 @@ class _OrderPageState extends State<OrderPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
         ),
-        title: Text("Select Clothes", style: TextStyle(
-            color: Colors.black
-        ),),
+        title: Text(
+          "Select Clothes",
+          style: TextStyle(color: Colors.black),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.search),
@@ -41,7 +41,6 @@ class _OrderPageState extends State<OrderPage> {
                 categoryWidget("girl", "Woman", false),
                 categoryWidget("child", "Kids", false),
                 categoryWidget("oldman", "Others", false),
-
               ],
             ),
             Expanded(
@@ -66,17 +65,29 @@ class _OrderPageState extends State<OrderPage> {
               children: [
                 Column(
                   children: [
-                    Text("Your Basket", style: headingStyle,),
-                    Text("7 Items added", style: contentStyle,)
+                    Text(
+                      "Your Basket",
+                      style: headingStyle,
+                    ),
+                    Text(
+                      "7 Items added",
+                      style: contentStyle,
+                    )
                   ],
                 ),
-                Text("\$200", style: headingStyle,)
+                Text(
+                  "\$200",
+                  style: headingStyle,
+                )
               ],
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>PickUpTimePage()));
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PickUpTimePage()));
               },
               child: Container(
                   padding: EdgeInsets.all(20),
@@ -85,22 +96,25 @@ class _OrderPageState extends State<OrderPage> {
                     gradient: gradientStyle,
                   ),
                   child: Center(
-                    child: Text("SELECT DATE & TIME", style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700
-                    ),),
-                  )
-              ),
+                    child: Text(
+                      "SELECT DATE & TIME",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w700),
+                    ),
+                  )),
             ),
-            SizedBox(height: 20,)
+            SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),
     );
   }
 
-  Container clothWidget(String img, String name, String price){
+  Container clothWidget(String img, String name, String price) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10),
       width: MediaQuery.of(context).size.width,
@@ -118,56 +132,61 @@ class _OrderPageState extends State<OrderPage> {
                   width: 50,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('asset/images/$img.png')
-                      )
-                  ),
+                          image: AssetImage('asset/images/$img.png'))),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("$name", style: headingStyle,),
-                    Text("\$$price", style: headingStyle.copyWith(color: Colors.grey),),
-                    Text("Add Note", style: contentStyle.copyWith(color: Colors.orange),)
-
+                    Text(
+                      "$name",
+                      style: headingStyle,
+                    ),
+                    Text(
+                      "\$$price",
+                      style: headingStyle.copyWith(color: Colors.grey),
+                    ),
+                    Text(
+                      "Add Note",
+                      style: contentStyle.copyWith(color: Colors.orange),
+                    )
                   ],
                 ),
-                Text("\$45", style: headingStyle,),
+                Text(
+                  "\$45",
+                  style: headingStyle,
+                ),
                 Row(
                   children: [
                     Container(
                       height: 40,
                       width: 40,
                       decoration: BoxDecoration(
-                          gradient: gradientStyle,
-                          shape: BoxShape.circle
-                      ),
+                          gradient: gradientStyle, shape: BoxShape.circle),
                       child: Center(
-                        child: Text("-", style: headingStyle.copyWith(
-                            color: Colors.white
-                        ),),
+                        child: Text(
+                          "-",
+                          style: headingStyle.copyWith(color: Colors.white),
+                        ),
                       ),
                     ),
                     Container(
                       height: 40,
                       width: 40,
-
                       child: Center(
-                        child: Text("1", style: headingStyle.copyWith(
-                            fontSize: 30
-                        )),
+                        child: Text("1",
+                            style: headingStyle.copyWith(fontSize: 30)),
                       ),
                     ),
                     Container(
                       height: 40,
                       width: 40,
                       decoration: BoxDecoration(
-                          gradient: gradientStyle,
-                          shape: BoxShape.circle
-                      ),
+                          gradient: gradientStyle, shape: BoxShape.circle),
                       child: Center(
-                        child: Text("+", style: headingStyle.copyWith(
-                            color: Colors.white
-                        ),),
+                        child: Text(
+                          "+",
+                          style: headingStyle.copyWith(color: Colors.white),
+                        ),
                       ),
                     )
                   ],
@@ -180,7 +199,7 @@ class _OrderPageState extends State<OrderPage> {
             children: [
               Container(
                 height: 1,
-                width: MediaQuery.of(context).size.width*0.75,
+                width: MediaQuery.of(context).size.width * 0.75,
                 color: Colors.grey,
               ),
             ],
@@ -189,8 +208,8 @@ class _OrderPageState extends State<OrderPage> {
       ),
     );
   }
-  Column categoryWidget(String img, String name, bool isActive)
-  {
+
+  Column categoryWidget(String img, String name, bool isActive) {
     return Column(
       children: [
         Container(
@@ -207,9 +226,7 @@ class _OrderPageState extends State<OrderPage> {
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('asset/images/$img.png'),
-                      fit: BoxFit.contain
-                  )
-              ),
+                      fit: BoxFit.contain)),
             ),
           ),
         ),

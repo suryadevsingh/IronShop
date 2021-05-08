@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'OrderConfirmPage.dart';
@@ -22,9 +20,10 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
         ),
-        title: Text("Select Date & Time", style: TextStyle(
-            color: Colors.black
-        ),),
+        title: Text(
+          "Select Date & Time",
+          style: TextStyle(color: Colors.black),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.search),
@@ -36,8 +35,13 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
         child: ListView(
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Pick up Date", style: headingStyle,),
-            SizedBox(height: 10,),
+            Text(
+              "Pick up Date",
+              style: headingStyle,
+            ),
+            SizedBox(
+              height: 10,
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -51,14 +55,23 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               height: 1,
               color: Colors.grey,
             ),
-            SizedBox(height: 15,),
-            Text("Pick up Time", style: headingStyle,),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              "Pick up Time",
+              style: headingStyle,
+            ),
+            SizedBox(
+              height: 15,
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -70,9 +83,16 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
                 ],
               ),
             ),
-            SizedBox(height: 20,),
-            Text("Delivery Date", style: headingStyle,),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Delivery Date",
+              style: headingStyle,
+            ),
+            SizedBox(
+              height: 10,
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -86,14 +106,23 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               height: 1,
               color: Colors.grey,
             ),
-            SizedBox(height: 15,),
-            Text("Delivery Time", style: headingStyle,),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              "Delivery Time",
+              style: headingStyle,
+            ),
+            SizedBox(
+              height: 15,
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -111,24 +140,36 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Total Amount Payable", style: headingStyle,),
-                Text("\$225", style: headingStyle,)
+                Text(
+                  "Total Amount Payable",
+                  style: headingStyle,
+                ),
+                Text(
+                  "\$225",
+                  style: headingStyle,
+                )
               ],
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             InkWell(
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => OrderConfirmPage()));},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => OrderConfirmPage()));
+              },
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(vertical: 20),
-                decoration: BoxDecoration(
-                    gradient: gradientStyle
-                ),
+                decoration: BoxDecoration(gradient: gradientStyle),
                 child: Center(
-                  child: Text("PLACE ORDER", style: contentStyle.copyWith(
-                      color: Colors.white,
-                      fontSize: 22
-                  ),),
+                  child: Text(
+                    "PLACE ORDER",
+                    style: contentStyle.copyWith(
+                        color: Colors.white, fontSize: 22),
+                  ),
                 ),
               ),
             )
@@ -137,46 +178,48 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
       ),
     );
   }
-  Container dateWidget(String day, String date, bool isActive)
-  {
+
+  Container dateWidget(String day, String date, bool isActive) {
     return Container(
       margin: EdgeInsets.only(right: 10),
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
           color: (isActive) ? Colors.orange : Colors.grey.withOpacity(0.3),
-          borderRadius: BorderRadius.all(Radius.circular(20))
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(20))),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(day, style: contentStyle.copyWith(
-              color: (isActive) ? Colors.white : Colors.black,
-              fontSize: 23
-          ),),
-          Text(date, style: contentStyle.copyWith(
-              color: (isActive) ? Colors.white : Colors.black,
-              fontSize: 18
-          ),)
+          Text(
+            day,
+            style: contentStyle.copyWith(
+                color: (isActive) ? Colors.white : Colors.black, fontSize: 23),
+          ),
+          Text(
+            date,
+            style: contentStyle.copyWith(
+                color: (isActive) ? Colors.white : Colors.black, fontSize: 18),
+          )
         ],
       ),
     );
   }
-  Container timeWidget(String time, bool isActive)
-  {
+
+  Container timeWidget(String time, bool isActive) {
     return Container(
       margin: EdgeInsets.only(right: 10),
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
           color: (isActive) ? Colors.orange : Colors.grey.withOpacity(0.3),
-          borderRadius: BorderRadius.all(Radius.circular(20))
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(20))),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(time, style: contentStyle.copyWith(
-            color: (isActive) ? Colors.white : Colors.black,
-          ),),
-
+          Text(
+            time,
+            style: contentStyle.copyWith(
+              color: (isActive) ? Colors.white : Colors.black,
+            ),
+          ),
         ],
       ),
     );

@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'HomePage.dart';
@@ -16,38 +14,45 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  Container(
+      body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
             Container(
               height: 70,
               width: 70,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('asset/images/logo.png')
-                  )
-              ),
+                      image: AssetImage('asset/images/logo.png'))),
             ),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Welcome Back!", style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'sfpro'
-                  ),),
-                  Text("Please Log In to Your Account", style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                  ),),
-                  SizedBox(height: 10,),
+                  Text(
+                    "Welcome Back!",
+                    style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'sfpro'),
+                  ),
+                  Text(
+                    "Please Log In to Your Account",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Email",
@@ -61,12 +66,15 @@ class _LoginPageState extends State<LoginPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("Forgot Password?", style: TextStyle(
-                          color: Colors.grey
-                      ),),
+                      Text(
+                        "Forgot Password?",
+                        style: TextStyle(color: Colors.grey),
+                      ),
                     ],
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   InkWell(
                     onTap: openHomePage,
                     child: Container(
@@ -76,21 +84,23 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.all(Radius.circular(40)),
                           gradient: LinearGradient(
                               colors: [Color(0xfff3953b), Color(0xffe57509)],
-                              stops: [0,1],
-                              begin: Alignment.topCenter
-                          )
-                      ),
+                              stops: [0, 1],
+                              begin: Alignment.topCenter)),
                       child: Center(
-                        child: Text("LOGIN", style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'sfpro'
-                        ),),
+                        child: Text(
+                          "LOGIN",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'sfpro'),
+                        ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -102,9 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Center(
                         child: Container(
-                            padding: EdgeInsets.all(10),
-                            child: Text("OR")
-                        ),
+                            padding: EdgeInsets.all(10), child: Text("OR")),
                       ),
                       Expanded(
                         child: Container(
@@ -114,7 +122,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -123,36 +133,30 @@ class _LoginPageState extends State<LoginPage> {
                         width: 60,
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(
-                                color: Colors.black,
-                                width: 0.5
-                            )
-                        ),
+                            border:
+                                Border.all(color: Colors.black, width: 0.5)),
                         child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('asset/images/googleLogo.png')
-                              )
-                          ),
+                                  image: AssetImage(
+                                      'asset/images/googleLogo.png'))),
                         ),
                       ),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Container(
                         height: 60,
                         width: 60,
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(
-                                color: Colors.black,
-                                width: 0.5
-                            )
-                        ),
+                            border:
+                                Border.all(color: Colors.black, width: 0.5)),
                         child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('asset/images/fbLogo.png')
-                              )
-                          ),
+                                  image:
+                                      AssetImage('asset/images/fbLogo.png'))),
                         ),
                       )
                     ],
@@ -163,34 +167,38 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?", style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'sfpro'
-                ),),
+                Text(
+                  "Don't have an account?",
+                  style: TextStyle(fontSize: 16, fontFamily: 'sfpro'),
+                ),
                 InkWell(
                   onTap: openSignUpPage,
-                  child: Text(" SIGN UP", style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700
-                  ),),
+                  child: Text(
+                    " SIGN UP",
+                    style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700),
+                  ),
                 )
               ],
             ),
-            SizedBox(height: 10,)
+            SizedBox(
+              height: 10,
+            )
           ],
         ),
       ),
     );
   }
 
-  void openSignUpPage()
-  {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
-  }
-  void openHomePage()
-  {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+  void openSignUpPage() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => SignUpPage()));
   }
 
+  void openHomePage() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
+  }
 }

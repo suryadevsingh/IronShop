@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'OrderPage.dart';
@@ -22,9 +20,10 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
         ),
-        title: Text("IRON YARD", style: TextStyle(
-            color: Colors.black
-        ),),
+        title: Text(
+          "IRON YARD",
+          style: TextStyle(color: Colors.black),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.notifications),
@@ -52,13 +51,17 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("BLESS THIS MESS", style: headingStyle),
-                              SizedBox(height: 5,),
-                              Text("We pick your clothes and give \nthem a fresh look", style: TextStyle(
-                                fontSize: 16,
-                              ),),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "We pick your clothes and give \nthem a fresh look",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
                             ],
-                          )
-                      ),
+                          )),
                     ),
                     Positioned(
                       bottom: 0,
@@ -68,15 +71,16 @@ class _HomePageState extends State<HomePage> {
                         width: 180,
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage('asset/images/bannerImg.png')
-                            )
-                        ),
+                                image:
+                                    AssetImage('asset/images/bannerImg.png'))),
                       ),
                     )
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Text("SERVICES", style: headingStyle),
               Container(
                 height: 200,
@@ -88,9 +92,8 @@ class _HomePageState extends State<HomePage> {
                       width: 120,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage('asset/images/servicesImg.png')
-                          )
-                      ),
+                              image:
+                                  AssetImage('asset/images/servicesImg.png'))),
                     ),
                     Expanded(
                       child: Container(
@@ -99,20 +102,28 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("IRON ONLY", style: headingStyle,),
-                            SizedBox(height: 10,),
+                            Text(
+                              "IRON ONLY",
+                              style: headingStyle,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             InkWell(
                               onTap: openOrderPage,
                               child: Container(
                                 decoration: BoxDecoration(
-                                    gradient:gradientStyle,
-                                    borderRadius: BorderRadius.all(Radius.circular(20))
+                                    gradient: gradientStyle,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20))),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 20),
+                                child: Text(
+                                  "Place Order",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600),
                                 ),
-                                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                                child: Text("Place Order", style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600
-                                ),),
                               ),
                             )
                           ],
@@ -122,7 +133,9 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 padding: EdgeInsets.all(20),
                 width: MediaQuery.of(context).size.width,
@@ -132,16 +145,26 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       children: [
-                        Text("AVAILABILITY ", style: contentStyle,),
-                        Text("AVAILABLE", style: contentStyle.copyWith(color: Colors.blue),)
+                        Text(
+                          "AVAILABILITY ",
+                          style: contentStyle,
+                        ),
+                        Text(
+                          "AVAILABLE",
+                          style: contentStyle.copyWith(color: Colors.blue),
+                        )
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Text("We are open from 7.00 am to 8.00 pm")
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 padding: EdgeInsets.all(20),
                 width: MediaQuery.of(context).size.width,
@@ -149,9 +172,17 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("CHECK THE ESTIMATION", style: contentStyle,),
-                    SizedBox(height: 10,),
-                    Text("You can check time extimation with price", style: contentStyle,),
+                    Text(
+                      "CHECK THE ESTIMATION",
+                      style: contentStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "You can check time extimation with price",
+                      style: contentStyle,
+                    ),
                   ],
                 ),
               ),
@@ -161,13 +192,11 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
-                        gradient: gradientStyle,
-                        shape: BoxShape.circle
+                        gradient: gradientStyle, shape: BoxShape.circle),
+                    child: Text(
+                      "+",
+                      style: TextStyle(color: Colors.white, fontSize: 40),
                     ),
-                    child: Text("+", style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40
-                    ),),
                   )
                 ],
               )
@@ -186,13 +215,9 @@ class _HomePageState extends State<HomePage> {
             title: Text("Home"),
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.track_changes),
-              title: Text("Track Order")
-          ),
+              icon: Icon(Icons.track_changes), title: Text("Track Order")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.view_list),
-              title: Text("My Orders")
-          ),
+              icon: Icon(Icons.view_list), title: Text("My Orders")),
           BottomNavigationBarItem(
             icon: Icon(Icons.track_changes),
             title: Text("Profile"),
@@ -202,13 +227,14 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void openRelevantPage(int pageId){
+  void openRelevantPage(int pageId) {
     print(pageId);
   }
-  void openOrderPage(){
+
+  void openOrderPage() {
     {
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => OrderPage()));
     }
   }
-
 }

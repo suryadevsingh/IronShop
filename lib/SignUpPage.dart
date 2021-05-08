@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'LoginPage.dart';
@@ -20,28 +18,32 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
             Container(
               height: 70,
               width: 70,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('asset/images/logo.png')
-                  )
-              ),
+                      image: AssetImage('asset/images/logo.png'))),
             ),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Sign Up", style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'sfpro'
-                  ),),
-                  SizedBox(height: 10,),
+                  Text(
+                    "Sign Up",
+                    style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'sfpro'),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Name",
@@ -62,7 +64,9 @@ class _SignUpPageState extends State<SignUpPage> {
                       labelText: "Password",
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     width: MediaQuery.of(context).size.width,
@@ -70,52 +74,60 @@ class _SignUpPageState extends State<SignUpPage> {
                         borderRadius: BorderRadius.all(Radius.circular(40)),
                         gradient: LinearGradient(
                             colors: [Color(0xfff3953b), Color(0xffe57509)],
-                            stops: [0,1],
-                            begin: Alignment.topCenter
-                        )
-                    ),
+                            stops: [0, 1],
+                            begin: Alignment.topCenter)),
                     child: Center(
-                      child: Text("SIGN UP", style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: 'sfpro'
-                      ),),
+                      child: Text(
+                        "SIGN UP",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'sfpro'),
+                      ),
                     ),
                   ),
-                  SizedBox(height: 10,),
-                  Text("By pressing signup you agree to our terms and conditions", style: TextStyle(
-                      fontSize: 15
-                  ),textAlign: TextAlign.center,)
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "By pressing signup you agree to our terms and conditions",
+                    style: TextStyle(fontSize: 15),
+                    textAlign: TextAlign.center,
+                  )
                 ],
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account?", style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'sfpro'
-                ),),
+                Text(
+                  "Already have an account?",
+                  style: TextStyle(fontSize: 16, fontFamily: 'sfpro'),
+                ),
                 InkWell(
                   onTap: openLoginPage,
-                  child: Text(" LOGIN", style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700
-                  ),),
+                  child: Text(
+                    " LOGIN",
+                    style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700),
+                  ),
                 )
               ],
             ),
-            SizedBox(height: 10,)
+            SizedBox(
+              height: 10,
+            )
           ],
         ),
       ),
     );
   }
-  void openLoginPage()
-  {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
-  }
 
+  void openLoginPage() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => LoginPage()));
+  }
 }

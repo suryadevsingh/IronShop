@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -30,28 +29,26 @@ class _MyHomePageState extends State<MyHomePage> {
           width: _size.width,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('asset/images/bg.png'),
-                fit: BoxFit.contain,
-              )
-          ),
+            image: AssetImage('asset/images/bg.png'),
+            fit: BoxFit.contain,
+          )),
           child: Center(
               child: Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('asset/images/logo.png')
-                    )
-                ),
-              )
-          ),
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('asset/images/logo.png'))),
+          )),
         ),
       ),
     );
   }
-  void openOnBoard()
-  {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>OnBoarding()),);
-  }
 
+  void openOnBoard() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => OnBoarding()),
+    );
+  }
 }
