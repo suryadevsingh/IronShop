@@ -4,7 +4,7 @@
 
  # Demo  
 <p>
-      <img src="https://github.com/suryadevsingh/clubHouse/blob/master/assets/screenshots/houseClub.gif" alt="club_House.com">
+      <img src="https://github.com/suryadevsingh/IronShop/blob/master/asset/screenshots/ironShop.gif" alt="IronShop.com">
   </p>
   
   Design Credit : https://www.uplabs.com/posts/laundry-service-iron-only-app-design-concept
