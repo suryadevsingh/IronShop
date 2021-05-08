@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'OrderConfirmPage.dart';
 import 'StyleScheme.dart';
 
 class PickUpTimePage extends StatefulWidget {
@@ -116,7 +117,7 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
             ),
             SizedBox(height: 10,),
             InkWell(
-              // onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => OrderConfirmPage()));},
+              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => OrderConfirmPage()));},
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(vertical: 20),

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'PickUpTimePage.dart';
 import 'StyleScheme.dart';
 
 class OrderPage extends StatefulWidget {
@@ -75,7 +76,7 @@ class _OrderPageState extends State<OrderPage> {
             SizedBox(height: 10,),
             InkWell(
               onTap: (){
-                // Navigator.push(context, MaterialPageRoute(builder: (context)=>PickUpTimePage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PickUpTimePage()));
               },
               child: Container(
                   padding: EdgeInsets.all(20),
