@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
   }
   void openOrderPage(){
     {
-      // Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
     }
   }
 
