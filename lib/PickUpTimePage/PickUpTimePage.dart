@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Order/OrderConfirmPage.dart';
@@ -33,7 +34,7 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.only(left: 10,right: 10),
         child: ListView(
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -136,8 +137,8 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
                 ],
               ),
             ),
-            Expanded(
-              child: Container(),
+            SizedBox(
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -151,9 +152,6 @@ class _PickUpTimePageState extends State<PickUpTimePage> {
                   style: headingStyle,
                 )
               ],
-            ),
-            SizedBox(
-              height: 10,
             ),
             InkWell(
               onTap: () {
