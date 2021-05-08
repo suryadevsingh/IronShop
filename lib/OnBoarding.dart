@@ -22,72 +22,74 @@ class _OnBoardingState extends State<OnBoarding> {
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            width: _size.width,
-            height: _size.height,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  "asset/images/bg.png"
-                ),
-              ),
-            ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-             Container(
-               height: 500,
-               child: PageView(
-                 controller: _pageController,
-                 children: [
-                   onBoardPage("onBoard1","Choose Clothes"),
-                   onBoardPage("onBoard2", "Schedule Pickup"),
-                   onBoardPage("onBoard3", "Get Best Iron Service"),
-                   onBoardPage("onBoard2", "Get on Time Delivery"),
-                   onBoardPage("onBoard4", "Pay Later"),
-                 ],
-                 onPageChanged: (value) => {setCurrentPage(value)},
-               ),
-             ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(5, (index) => getIndicator(index)),
-              ),
-            ],
-          ),
-
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: InkWell(
-              onTap: changePage,
-              child: Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.only(bottom: 30),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: LinearGradient(
-                      colors: [Color(0xfff3953b), Color(0xffe57509)],
-                      stops: [0,1],
-                      begin: Alignment.topCenter
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Container(
+              width: _size.width,
+              height: _size.height,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "asset/images/bg.png"
                   ),
                 ),
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: Colors.white,
-                  size: 40,
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+               Container(
+                 height: 500,
+                 child: PageView(
+                   controller: _pageController,
+                   children: [
+                     onBoardPage("onBoard1","Choose Clothes"),
+                     onBoardPage("onBoard2", "Schedule Pickup"),
+                     onBoardPage("onBoard3", "Get Best Iron Service"),
+                     onBoardPage("onBoard2", "Get on Time Delivery"),
+                     onBoardPage("onBoard4", "Pay Later"),
+                   ],
+                   onPageChanged: (value) => {setCurrentPage(value)},
+                 ),
+               ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(5, (index) => getIndicator(index)),
+                ),
+              ],
+            ),
+
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: InkWell(
+                onTap: changePage,
+                child: Container(
+                  height: 70,
+                  width: 70,
+                  margin: EdgeInsets.only(bottom: 30),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(
+                        colors: [Color(0xfff3953b), Color(0xffe57509)],
+                        stops: [0,1],
+                        begin: Alignment.topCenter
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                    size: 40,
+                  ),
                 ),
               ),
             ),
-          ),
 
 
-        ],
+          ],
+        ),
       ),
     );
   }

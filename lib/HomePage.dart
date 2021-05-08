@@ -31,146 +31,148 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 200,
-              width: MediaQuery.of(context).size.width,
-              color: Color(0xfff1ffff),
-              child: Stack(
-                children: [
-                  Positioned(
-                    top: 0,
-                    left: 0,
-                    child: Container(
-                        padding: EdgeInsets.all(20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("BLESS THIS MESS", style: headingStyle),
-                            SizedBox(height: 5,),
-                            Text("We pick your clothes and give \nthem a fresh look", style: TextStyle(
-                              fontSize: 16,
-                            ),),
-                          ],
-                        )
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 200,
+                width: MediaQuery.of(context).size.width,
+                color: Color(0xfff1ffff),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: Container(
+                          padding: EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("BLESS THIS MESS", style: headingStyle),
+                              SizedBox(height: 5,),
+                              Text("We pick your clothes and give \nthem a fresh look", style: TextStyle(
+                                fontSize: 16,
+                              ),),
+                            ],
+                          )
+                      ),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: Container(
-                      height: 180,
-                      width: 180,
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: Container(
+                        height: 180,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('asset/images/bannerImg.png')
+                            )
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 10,),
+              Text("SERVICES", style: headingStyle),
+              Container(
+                height: 200,
+                color: Color(0xfff1ffff),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 200,
+                      width: 120,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage('asset/images/bannerImg.png')
+                              image: AssetImage('asset/images/servicesImg.png')
                           )
                       ),
                     ),
-                  )
-                ],
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.all(30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("IRON ONLY", style: headingStyle,),
+                            SizedBox(height: 10,),
+                            InkWell(
+                              onTap: openOrderPage,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    gradient:gradientStyle,
+                                    borderRadius: BorderRadius.all(Radius.circular(20))
+                                ),
+                                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                                child: Text("Place Order", style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600
+                                ),),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 10,),
-            Text("SERVICES", style: headingStyle),
-            Container(
-              height: 200,
-              color: Color(0xfff1ffff),
-              child: Row(
+              SizedBox(height: 10,),
+              Container(
+                padding: EdgeInsets.all(20),
+                width: MediaQuery.of(context).size.width,
+                color: Color(0xfff1ffff),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text("AVAILABILITY ", style: contentStyle,),
+                        Text("AVAILABLE", style: contentStyle.copyWith(color: Colors.blue),)
+                      ],
+                    ),
+                    SizedBox(height: 10,),
+                    Text("We are open from 7.00 am to 8.00 pm")
+                  ],
+                ),
+              ),
+              SizedBox(height: 10,),
+              Container(
+                padding: EdgeInsets.all(20),
+                width: MediaQuery.of(context).size.width,
+                color: Color(0xfff1ffff),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("CHECK THE ESTIMATION", style: contentStyle,),
+                    SizedBox(height: 10,),
+                    Text("You can check time extimation with price", style: contentStyle,),
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    height: 200,
-                    width: 120,
+                    padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('asset/images/servicesImg.png')
-                        )
+                        gradient: gradientStyle,
+                        shape: BoxShape.circle
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.all(30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("IRON ONLY", style: headingStyle,),
-                          SizedBox(height: 10,),
-                          InkWell(
-                            onTap: openOrderPage,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  gradient:gradientStyle,
-                                  borderRadius: BorderRadius.all(Radius.circular(20))
-                              ),
-                              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                              child: Text("Place Order", style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600
-                              ),),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+                    child: Text("+", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40
+                    ),),
                   )
                 ],
-              ),
-            ),
-            SizedBox(height: 10,),
-            Container(
-              padding: EdgeInsets.all(20),
-              width: MediaQuery.of(context).size.width,
-              color: Color(0xfff1ffff),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text("AVAILABILITY ", style: contentStyle,),
-                      Text("AVAILABLE", style: contentStyle.copyWith(color: Colors.blue),)
-                    ],
-                  ),
-                  SizedBox(height: 10,),
-                  Text("We are open from 7.00 am to 8.00 pm")
-                ],
-              ),
-            ),
-            SizedBox(height: 10,),
-            Container(
-              padding: EdgeInsets.all(20),
-              width: MediaQuery.of(context).size.width,
-              color: Color(0xfff1ffff),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("CHECK THE ESTIMATION", style: contentStyle,),
-                  SizedBox(height: 10,),
-                  Text("You can check time extimation with price", style: contentStyle,),
-                ],
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  padding: EdgeInsets.all(15),
-                  decoration: BoxDecoration(
-                      gradient: gradientStyle,
-                      shape: BoxShape.circle
-                  ),
-                  child: Text("+", style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40
-                  ),),
-                )
-              ],
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

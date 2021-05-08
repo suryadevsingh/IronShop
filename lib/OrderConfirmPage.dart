@@ -33,8 +33,8 @@ class _OrderConfirmPageState extends State<OrderConfirmPage> {
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: MediaQuery.of(context).size.width,

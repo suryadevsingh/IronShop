@@ -32,8 +32,8 @@ class _TrackOrderPageState extends State<TrackOrderPage> {
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text("Order Number 1001", style: headingStyle,),
             Text("Order confirmed. Ready to pick", style: contentStyle.copyWith(

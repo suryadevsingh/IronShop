@@ -24,24 +24,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        height: _size.height,
-        width: _size.width,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('asset/images/bg.png')
-            )
-        ),
-        child: Center(
-            child: Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('asset/images/logo.png')
-                  )
-              ),
-            )
+      body: SingleChildScrollView(
+        child: Container(
+          height: _size.height,
+          width: _size.width,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('asset/images/bg.png'),
+                fit: BoxFit.contain,
+              )
+          ),
+          child: Center(
+              child: Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('asset/images/logo.png')
+                    )
+                ),
+              )
+          ),
         ),
       ),
     );
