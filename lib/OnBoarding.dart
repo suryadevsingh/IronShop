@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'LoginPage.dart';
+
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key key}) : super(key: key);
 
@@ -148,7 +150,7 @@ class _OnBoardingState extends State<OnBoarding> {
   void changePage(){
     print(currentPage);
     if(currentPage == 4){
-      // Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
     }
     else
       {
